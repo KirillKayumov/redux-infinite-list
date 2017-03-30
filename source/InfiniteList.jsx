@@ -19,7 +19,7 @@ class InfiniteList extends React.Component {
 
     if (!finish) {
       return (
-        <Waypoint onEnter={this.handleEnter} {...waypointProps} />
+        <Waypoint onEnter={this.handleEnter} {...waypointProps} key={this.props.name} />
       );
     }
   }
@@ -53,6 +53,7 @@ InfiniteList.propTypes = {
     PropTypes.object,
   ]).isRequired,
   listState: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
   onEndReach: PropTypes.func.isRequired,
   placeholder: PropTypes.func.isRequired,
   waypointProps: PropTypes.object,

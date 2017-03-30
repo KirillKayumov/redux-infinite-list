@@ -26,6 +26,7 @@ const buildMapStateToProps = (collections, name, immutable) => {
   return (state) => {
     const { items, listState } = buildProps(state);
     return {
+      name,
       items,
       listState,
       immutable,
